@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Jewellery Evaluation</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Jewellery Evaluation</h1>
+      <div class="top-controls">
+        <label>Date: <input type="date" id="invoiceDate"></label>
+        <label>Customer name: <input type="text" id="customerName" placeholder="Customer name"></label>
+      </div>
+    </header>
+
+    <section class="rates">
+      <h2>Rates (per gram)</h2>
+      <div class="rates-row">
+        <label>24k: <input type="number" id="rate24" min="0" step="0.01"></label>
+        <label>22k: <input type="number" id="rate22" min="0" step="0.01"></label>
+        <label>20k: <input type="number" id="rate20" min="0" step="0.01"></label>
+        <label>18k: <input type="number" id="rate18" min="0" step="0.01"></label>
+        <button id="saveRates">Save Rates</button>
+        <button id="loadRates">Load Rates</button>
+      </div>
+    </section>
+
+    <section class="add-item">
+      <h2>Add Item</h2>
+      <form id="itemForm">
+        <input type="number" id="pieces" placeholder="No. of pcs" min="1" required>
+        <input type="text" id="itemDesc" placeholder="Description" required>
+        <input type="number" id="grossWeight" placeholder="Gross wt (gms)" step="0.01" required>
+        <input type="number" id="netWeight" placeholder="Net wt (gms)" step="0.01" required>
+        <select id="karat">
+          <option value="22">22k / 91.6%</option>
+          <option value="20">20k / 83.2%</option>
+          <option value="18">18k / 75%</option>
+        </select>
+        <button type="submit">Add</button>
+      </form>
+    </section>
+
+    <!-- Print Header -->
+<div id="printHeader" class="print-only">
+    <h1 class="company-name">Shri Tirupati Gems & Jewels Pvt. Ltd.</h1>
+    <p class="company-info">
+      Designers & Manufacturers of Quality Jewellery <br>
+      Tirupati Bhawan, M1/8A Sector B, Opp Indian Oil Corporation Office <br>
+      Kapoorthala, Aliganj <br>
+      Lucknow - 226024, UP, India <br>
+      Phone: 2324052, +91 9415011658, +91 9415548877
+    </p>
+    <div class="logo-placeholder">🍃</div>
+  
+    <h2 class="print-heading">TO WHOM IT MAY CONCERN</h2>
+    <h3 class="print-subheading">
+      GOLD JEWELLERY (<span id="customerNamePrint"></span>) AS ON <span id="invoiceDatePrint"></span>
+    </h3>
+  </div>
+  
+
+    <section class="items">
+      <h2>Items</h2>
+      <table id="itemsTable">
+        <thead>
+          <tr>
+            <th>No. of Articles (pcs)</th>
+            <th>Description</th>
+            <th>Gross Weight (gms)</th>
+            <th>Net Weight (gms)</th>
+            <th>Carat</th>
+            <th>Rate/Gram</th>
+            <th>Market Value (Rs)</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+        <tfoot>
+          <tr>
+            <td id="totalPieces">0 pcs</td>
+            <td colspan="1" style="text-align:right;font-weight:bold">Total:</td>
+            <td id="totalGross">0.00 gms</td>
+            <td id="totalNet">0.00 gms</td>
+            <td colspan="2"></td>
+            <td id="totalValue">Rs 0.00</td>
+            <td></td>
+          </tr>
+        </tfoot>
+      </table>
+      <p id="valuationText" class="print-only valuation-text"></p>
+
+    </section>
+
+    <section class="actions">
+      <button id="clearAll">Clear All</button>
+      <button id="generate">Generate Invoice / Print</button>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.25/jspdf.plugin.autotable.min.js"></script>
+
+</body>
+</html>

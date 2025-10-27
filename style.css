@@ -1,0 +1,203 @@
+body {
+    font-family: "Poppins", sans-serif;
+    background-color: #fdf8f1; /* soft beige ivory */
+    color: #3b2f2f;
+    margin: 0;
+    padding: 0;
+  }
+  
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    background-color: #fffaf2;
+    border-radius: 12px;
+    padding: 25px 40px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+  
+header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+  
+h1 {
+    color: #b88a00;
+    margin-bottom: 10px;
+}
+  
+.top-controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+  
+label {
+    font-weight: 500;
+}
+  
+input, select, button {
+    border: 1px solid #d4b46e;
+    border-radius: 6px;
+    padding: 8px 10px;
+    font-size: 14px;
+}
+  
+input:focus, select:focus {
+    outline: none;
+    border-color: #b88a00;
+    box-shadow: 0 0 4px rgba(184, 138, 0, 0.4);
+}
+  
+button {
+    background-color: #b88a00;
+    color: white;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+  
+button:hover {
+    background-color: #a07800;
+}
+  
+section {
+    margin-top: 30px;
+}
+  
+h2 {
+    color: #a07800;
+    border-bottom: 1px solid #d4b46e;
+    padding-bottom: 5px;
+}
+  
+.rates-row,
+#itemForm {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+}
+  
+#itemForm input, #itemForm select {
+    flex: 1 1 120px;
+}
+  
+#itemForm button {
+    flex: 1 1 100px;
+}
+  
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    font-size: 14px;
+    background-color: #fffdf7;
+}
+  
+th {
+    background-color: #f3e4c6;
+    color: #3b2f2f;
+    padding: 10px;
+    border: 1px solid #e2cf9b;
+}
+  
+td {
+    border: 1px solid #e2cf9b;
+    text-align: center;
+    padding: 8px;
+}
+  
+tfoot td {
+    background-color: #f8f1df;
+    font-weight: bold;
+}
+  
+.actions {
+    text-align: center;
+    margin-top: 30px;
+}
+  
+#clearAll {
+    background-color: #8b0000;
+}
+  
+#clearAll:hover {
+    background-color: #6e0000;
+}
+  
+.disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+  
+input:disabled, select:disabled, button:disabled {
+    opacity: 0.6;
+    background-color: #eaeaea !important;
+    color: #777 !important;
+    cursor: not-allowed !important;
+}
+  
+.print-only {
+    display: none;
+}
+  
+@media print {
+    body {
+      background: white;
+      color: black;
+      font-family: "Times New Roman", serif;
+    }
+  
+    .container, .actions, .rates, .add-item, .top-controls {
+      display: none;
+    }
+  
+    .print-only {
+      display: block;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+  
+    .company-name {
+      font-family: "Brush Script MT", cursive;
+      font-size: 28px;
+      margin-bottom: 0;
+    }
+  
+    .company-info {
+      font-size: 14px;
+      line-height: 1.5;
+    }
+  
+    .logo-placeholder {
+      font-size: 30px;
+      margin: 10px 0;
+    }
+  
+    .print-heading {
+      font-weight: bold;
+      text-decoration: underline;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  
+    .print-subheading {
+      font-weight: bold;
+      text-decoration: underline;
+      font-size: 16px;
+      margin-bottom: 25px;
+    }
+  
+    .valuation-text {
+      margin-top: 25px;
+      font-size: 15px;
+      line-height: 1.6;
+      text-align: justify;
+    }
+  
+    table {
+      font-size: 13px;
+    }
+}
+  
