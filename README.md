@@ -12,7 +12,7 @@ Built using **HTML**, **CSS**, and **JavaScript**, this tool allows you to:
 ---
 
 ## 🚀 Live Demo
-👉 [Click here to open the app](https://vaasviagarwal.github.io/gold-valuation-app/)
+👉 [Click here to open the app](https://vaasviagarwal.github.io/jewellery-valuation-tool/)
 
 *(The link will work after enabling GitHub Pages.)*
 
